@@ -14,7 +14,7 @@ gitPull_old(){
     if [ ! -d /ql/jbot ]; then
         mkdir /ql/jbot
     fi
-    cd /ql/repo && git clone https://github.com/kissyouhunter/bot.git
+    cd /ql/repo && git clone -b master https://github.com/kissyouhunter/bot.git
     cp -a /ql/repo/bot/* /ql/jbot && cp -a /ql/jbot/conf/* /ql/config && cp -a /ql/jbot/jk_script/* /ql/scripts
     if [ ! -d /ql/log/bot ]; then
         mkdir /ql/log/bot
@@ -42,14 +42,18 @@ echo
 echo -e "\n\t\t\t【青龙安装Bot监控】\n"
 echo
 if [ -f /ql/jbot/user/user.py ] || [ -f /ql/data/jbot/user/user.py ];then
-    echo -e "\n你已部署，请启动即可:\ncd /ql\npython3 -m jbot\n\n或参考本仓库第3-4步:\nhttps://github.com/curtinlv/gd/blob/main/README.md\n"
+    echo -e "\n你已部署，请启动即可:\ncd /ql\npython3 -m jbot\n\n或参考本仓库第3-4步:\nhttps://github.com/kissyouhunter/bot/blob/main/README.md\n"
     exit 0
 fi
 install_depend
 if [ -d /ql/data ]; then
     gitPull_new
+    echo -e "\n*******************\n所需环境已部署完成\n*******************\n"
+    echo -e "请配置tg机器人参数，再启动机器人即可。\n启动命令 cd /ql/data/ && python3 -m jbot"
+
 else
     gitPull_old
+    echo -e "\n*******************\n所需环境已部署完成\n*******************\n"
+    echo -e "请配置tg机器人参数，再启动机器人即可。\n启动命令 cd /ql/ && python3 -m jbot"
+
 fi
-echo -e "\n*******************\n所需环境已部署完成\n*******************\n"
-echo -e "请配置tg机器人参数，再启动机器人即可。\n启动命令 cd /ql/data/ && python3 -m jbot"
