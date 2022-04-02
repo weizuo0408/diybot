@@ -14,7 +14,7 @@ gitPull_old(){
     if [ ! -d /ql/jbot ]; then
         mkdir /ql/jbot
     fi
-    cd /ql/repo && git clone https://github.com/curtinlv/gd.git
+    cd /ql/repo && git clone https://github.com/kissyouhunter/bot.git
     cp -a /ql/repo/gd/* /ql/jbot && cp -a /ql/jbot/conf/* /ql/config && cp -a /ql/jbot/jk_script/* /ql/scripts
     if [ ! -d /ql/log/bot ]; then
         mkdir /ql/log/bot
@@ -27,7 +27,7 @@ gitPull_new(){
     if [ ! -d /ql/data/jbot ]; then
         mkdir /ql/data/jbot
     fi
-    cd /ql/data/repo && git clone https://github.com/curtinlv/gd.git
+    cd /ql/data/repo && git clone https://github.com/kissyouhunter/bot.git
     cp -a /ql/data/repo/gd/* /ql/data/jbot && cp -a /ql/data/jbot/conf/* /ql/data/config && cp -a /ql/data/jbot/jk_script/* /ql/data/scripts
     if [ ! -d /ql/data/log/bot ]; then
         mkdir /ql/data/log/bot
