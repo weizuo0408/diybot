@@ -72,7 +72,7 @@ cd /ql && python3 -m jbot
 # 2.12.0之后的版本
 cd /ql/data/jbot/ && pm2 start ecosystem.config.js #第一次启动是这样启动，后续启动参考底部相关命令
 
-# 2.12.0之后的版本
+# 2.12.0之前的版本
 cd /ql/jbot/ && pm2 start ecosystem.config.js #第一次启动是这样启动，后续启动参考底部相关命令
 
 # 查看日志：看看有没有报错。
@@ -80,7 +80,7 @@ cd /ql/jbot/ && pm2 start ecosystem.config.js #第一次启动是这样启动，
 # 2.12.0之后的版本
 tail -100f /ql/data/log/bot/run.log
 
-# 2.12.0之后的版本
+# 2.12.0之前的版本
 tail -100f /ql/log/bot/run.log
 
 #终止查看日志 按 Ctrl+C
