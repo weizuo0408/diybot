@@ -20,7 +20,7 @@ docker exec -it qinglong /bin/bash
 - [x] 一键安装
 
 ```
-wget https://raw.githubusercontent.com/kissyouhunter/bot/main/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/kissyouhunter/jbot/main/install.sh && bash install.sh
 ```
 
 
@@ -29,11 +29,11 @@ wget https://raw.githubusercontent.com/kissyouhunter/bot/main/install.sh && bash
 ```bash
 # 操作环境，容器内:
 # 机器人登录相关参数，存放路径：
-## 填写参考：https://raw.githubusercontent.com/kissyouhunter/bot/main/conf/bot.json
+## 填写参考：https://raw.githubusercontent.com/kissyouhunter/jbot/main/conf/bot.json
 映射的文件夹 config/bot.json
 
 # 监控频道相关参数，存放路径：
-## 填写参考：https://raw.githubusercontent.com/kissyouhunter/bot/main/conf/botset.json
+## 填写参考：https://raw.githubusercontent.com/kissyouhunter/jbot/main/conf/diybotset.json
 映射的文件夹 config/diybotset.json
 
 ```
