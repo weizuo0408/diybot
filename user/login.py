@@ -36,7 +36,7 @@ def restart():
 
 
 def start():
-    file = "/jd/config/botset.json" if V4 else "/ql/config/botset.json"
+    file = "/jd/config/botset.json" if V4 else "/ql/data/config/botset.json"
     with open(file, "r", encoding="utf-8") as f1:
         botset = f1.read()
     botset = botset.replace('user": "False"', 'user": "True"')
@@ -46,7 +46,7 @@ def start():
 
 
 def close():
-    file = "/jd/config/botset.json" if V4 else "/ql/config/botset.json"
+    file = "/jd/config/botset.json" if V4 else "/ql/data/config/botset.json"
     with open(file, "r", encoding="utf-8") as f1:
         botset = f1.read()
     botset = botset.replace('user": "True"', 'user": "False"')
@@ -56,7 +56,7 @@ def close():
 
 
 def state():
-    file = "/jd/config/botset.json" if V4 else "/ql/config/botset.json"
+    file = "/jd/config/botset.json" if V4 else "/ql/data/config/botset.json"
     with open(file, "r", encoding="utf-8") as f1:
         botset = f1.read()
     if 'user": "True"' in botset:
@@ -70,7 +70,7 @@ async def user_login(event):
     try:
         login = False
         sender = event.sender_id
-        session = "/jd/config/user.session" if V4 else "/ql/config/user.session"
+        session = "/jd/config/user.session" if V4 else "/ql/data/config/user.session"
         async with jdbot.conversation(sender, timeout=120) as conv:
             msg = await conv.send_message("请做出你的选择")
             buttons = [
