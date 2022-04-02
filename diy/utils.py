@@ -35,7 +35,7 @@ shoptokenIds = myids(diybotset['shoptokenId'], my_chat_id)
 
 
 QL8, QL2 = False, False
-if os.path.exists('/ql//data/config/env.sh'):
+if os.path.exists('/ql/config/env.sh'):
     QL8 = True
 else:
     QL2 = True
@@ -124,7 +124,7 @@ def wskey(arg):
     if V4:
         file = f"{CONFIG_DIR}/wskey.list"
     else:
-        file = "/ql/data/db/wskey.list"
+        file = "/ql/db/wskey.list"
     if arg == "str":
         with open(file, 'r', encoding='utf-8') as f1:
             wskey = f1.read()

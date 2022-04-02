@@ -24,7 +24,7 @@
             "isOpen": true,
             "name": "jdjoy_open通用ID任务",
             "envName": "comm_activityIDList",
-            "scriptPath": "/ql/data/scripts/jd_joyjd_open.js"
+            "scriptPath": "/ql/scripts/jd_joyjd_open.js"
          },
         {
             "isOpen": true,

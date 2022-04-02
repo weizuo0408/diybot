@@ -20,8 +20,27 @@ docker exec -it qinglong /bin/bash
 - [x] 一键安装
 
 ```
-wget https://raw.githubusercontent.com/kissyouhunter/bot/main/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/curtinlv/gd/main/install.sh && bash install.sh
 ```
+
+- [ ] 人工安装
+
+``` bash
+# 操作环境，容器内执行。如果一键安装完成，就不用执行这一块。
+# 包依赖
+apk add zlib zlib-dev libjpeg-turbo libjpeg-turbo-dev gcc python3-dev libffi-dev musl-dev linux-headers
+
+# 模块依赖
+pip3 install qrcode==7.3.1 Telethon==1.24.0 requests==2.27.1 Pillow==9.0.0 python-socks==1.2.4 async_timeout==4.0.2 prettytable==3.0.0
+
+# 拉取jbot主要代码
+cd /ql/repo && git clone https://github.com/curtinlv/gd.git
+cp -a /ql/repo/gd/* /ql/jbot && cp -a /ql/jbot/conf/* /ql/config 
+cp -a /ql/jbot/jk_script/* /ql/scripts
+mkdir /ql/log/bot
+
+```
+
 
 
 ## 3.配置tg机器人参数
