@@ -42,7 +42,7 @@ echo
 echo -e "\n\t\t\t【青龙安装Bot监控】\n"
 echo
 if [ -f /ql/jbot/user/user.py ] || [ -f /ql/data/jbot/user/user.py ];then
-    echo -e "\n你已部署，请启动即可:\ncd /ql\npython3 -m jbot\n\n或参考本仓库第3-4步:\nhttps://github.com/kissyouhunter/bot/blob/main/README.md\n"
+    echo -e "\n你已部署机器人\n\n或参考本仓库第3-4步:\nhttps://github.com/kissyouhunter/bot/blob/main/README.md\n"
     exit 0
 fi
 install_depend
