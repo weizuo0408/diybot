@@ -14,8 +14,8 @@ gitPull_old(){
     if [ ! -d /ql/jbot ]; then
         mkdir /ql/jbot
     fi
-    cd /ql/repo && git clone -b master https://github.com/kissyouhunter/bot.git
-    cp -a /ql/repo/bot/* /ql/jbot && cp -a /ql/jbot/conf/* /ql/config && cp -a /ql/jbot/jk_script/* /ql/scripts
+    cd /ql/repo && git clone -b master https://github.com/kissyouhunter/jbot.git
+    cp -a /ql/repo/jbot/* /ql/jbot && cp -a /ql/jbot/conf/* /ql/config && cp -a /ql/jbot/jk_script/* /ql/scripts
     if [ ! -d /ql/log/bot ]; then
         mkdir /ql/log/bot
     fi
@@ -27,8 +27,8 @@ gitPull_new(){
     if [ ! -d /ql/data/jbot ]; then
         mkdir /ql/data/jbot
     fi
-    cd /ql/data/repo && git clone https://github.com/kissyouhunter/bot.git
-    cp -a /ql/data/repo/bot/* /ql/data/jbot && cp -a /ql/data/jbot/conf/* /ql/data/config && cp -a /ql/data/jbot/jk_script/* /ql/data/scripts
+    cd /ql/data/repo && git clone https://github.com/kissyouhunter/jbot.git
+    cp -a /ql/data/repo/jbot/* /ql/data/jbot && cp -a /ql/data/jbot/conf/* /ql/data/config && cp -a /ql/data/jbot/jk_script/* /ql/data/scripts
     if [ ! -d /ql/data/log/bot ]; then
         mkdir /ql/data/log/bot
     fi
@@ -42,7 +42,7 @@ echo
 echo -e "\n\t\t\t【青龙安装Bot监控】\n"
 echo
 if [ -f /ql/jbot/user/user.py ] || [ -f /ql/data/jbot/user/user.py ];then
-    echo -e "\n你已部署机器人\n\n或参考本仓库第3-4步:\nhttps://github.com/kissyouhunter/bot/blob/main/README.md\n"
+    echo -e "\n你已部署机器人\n\n或参考本仓库第3-4步:\nhttps://github.com/kissyouhunter/jbot/blob/main/README.md\n"
     exit 0
 fi
 install_depend
