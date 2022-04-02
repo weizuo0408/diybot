@@ -29,12 +29,12 @@ wget https://raw.githubusercontent.com/kissyouhunter/bot/main/install.sh && bash
 ```bash
 # 操作环境，容器内:
 # 机器人登录相关参数，存放路径：
-## 填写参考：https://raw.githubusercontent.com/curtinlv/gd/main/conf/bot.json
-vi /ql/config/bot.json
+## 填写参考：https://raw.githubusercontent.com/kissyouhunter/bot/main/conf/bot.json
+映射的文件夹 config/bot.json
 
 # 监控频道相关参数，存放路径：
-## 填写参考：https://raw.githubusercontent.com/curtinlv/gd/main/conf/botset.json
-vi /ql/config/diybotset.json
+## 填写参考：https://raw.githubusercontent.com/kissyouhunter/bot/main/conf/botset.json
+映射的文件夹 config/diybotset.json
 
 ```
 
@@ -45,11 +45,20 @@ vi /ql/config/diybotset.json
 ```bash
 # 操作环境，容器内:
 ## 删除历史登录session
+
+## 2.12.0之后的版本
+rm -f /ql/data//config/user.session
+
+## 2.12.0之前的版本
 rm -f /ql/config/user.session
 
 # 首次启动，按照提示登录tg，填手机号格式0086xxxxxxxx
-cd /ql
-python3 -m jbot
+
+## 2.12.0之后的版本
+cd /ql/data && python3 -m jbot
+
+## 2.12.0之前的版本
+cd /ql && python3 -m jbot
 
 ```
 
@@ -59,11 +68,21 @@ python3 -m jbot
 
 ```bash
 # 通过pm2 后台启动，除了登录验证外，建议使用pm2启动机器人
-cd /ql/jbot/
-pm2 start ecosystem.config.js #第一次启动是这样启动，后续启动参考底部相关命令
+
+# 2.12.0之后的版本
+cd /ql/data/jbot/ && pm2 start ecosystem.config.js #第一次启动是这样启动，后续启动参考底部相关命令
+
+# 2.12.0之后的版本
+cd /ql/jbot/ && pm2 start ecosystem.config.js #第一次启动是这样启动，后续启动参考底部相关命令
 
 # 查看日志：看看有没有报错。
+
+# 2.12.0之后的版本
+tail -100f /ql/data/log/bot/run.log
+
+# 2.12.0之后的版本
 tail -100f /ql/log/bot/run.log
+
 #终止查看日志 按 Ctrl+C
 
 
