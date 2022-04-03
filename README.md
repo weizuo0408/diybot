@@ -31,10 +31,14 @@ wget https://raw.githubusercontent.com/kissyouhunter/jbot/main/install.sh && bas
 # 操作环境，容器内:
 # 机器人登录相关参数，存放路径：
 ## 填写参考：https://raw.githubusercontent.com/kissyouhunter/jbot/main/conf/bot.json
+打开网页进入青龙的页面，进入配置文件，右上角选择bot.json（如无此文件，刷新网页）
+或者
 映射的文件夹 config/bot.json
 
 # 监控频道相关参数，存放路径：
 ## 填写参考：https://raw.githubusercontent.com/kissyouhunter/jbot/main/conf/diybotset.json
+打开网页进入青龙的页面，进入配置文件，右上角选择diybotset.json（如无此文件，刷新网页）
+或者
 映射的文件夹 config/diybotset.json
 
 ```
