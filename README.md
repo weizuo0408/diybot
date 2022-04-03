@@ -83,8 +83,10 @@ tail -100f /ql/data/log/bot/run.log
 # 2.12.0之前的版本
 tail -100f /ql/log/bot/run.log
 
-#终止查看日志 按 Ctrl+C
+# 终止查看日志 按 Ctrl+C
 
+# 配置文件里更改，每次容器启动后机器人会自动启动
+AutoStartBot="true"
 
 ```
 
